@@ -497,6 +497,7 @@ margin-left: 80px;
 .footer-form {
     display: flex;
     align-items: center;
+    gap: 24px;
 }
 
 .footer-input-title {
@@ -514,7 +515,7 @@ margin-left: 80px;
     letter-spacing: 0.04em;
     color: #ffffff;
     padding-left: 16px;
-    background-color: inherit;
+    background-color: transparent;
     border: 1px solid #ffffff;
     border-radius: 4px;
     margin-right: 24px;
@@ -544,7 +545,7 @@ margin-left: 80px;
     color: #ffffff;
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     background-color: #4d5ae5;
     cursor: pointer;
@@ -567,13 +568,14 @@ margin-left: 80px;
     align-items: center;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 250ms ease-in-out, visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-open {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -632,6 +634,7 @@ margin-left: 80px;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 16px;
 }
 
 .modal-input {
@@ -695,6 +698,7 @@ margin-left: 80px;
 }
 
 .modal-textarea {
+    width: 100%;
     padding: 8px 16px;
     width: 360px;
     height: 120px;
@@ -745,7 +749,7 @@ margin-left: 80px;
 .modal-btn {
     border-radius: 4px;
     padding: 16px 32px;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     font-weight: 500;
     font-size: 16px;
